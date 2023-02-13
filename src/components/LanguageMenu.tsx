@@ -13,7 +13,7 @@ const LanguageMenu = () => {
   const router = useRouter()
 
   const changeLanguage = (locale: string) => {
-    return () => router.push('', '', { locale })
+    return () => router.push(router.pathname, router.asPath, { locale })
   }
 
   return (

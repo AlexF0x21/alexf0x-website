@@ -1,2 +1,2 @@
 # My website
-TEST VERSION: [*click*](https://alexf0x.ru)
+Test version: https://alexf0x.ru

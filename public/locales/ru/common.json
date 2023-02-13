@@ -1,0 +1,15 @@
+{
+  "home": {
+    "title": "Главная - AlexF0x",
+    "greetings": "Привет, меня зовут <name>AlexF0x</name>",
+    "about": "Фронт-энд разработчик и немного пишу плагины для Майнкрафт."
+  },
+  "error404": {
+    "title": "Ошибка 404 - AlexF0x",
+    "not-found": "Страница не найдена",
+    "not-found-detail": "Страница, к которой вы обратились не найдена или была удалена.",
+    "back-to-home": "Вернуться на главную"
+  },
+  "copyright": "Копирайт © {{currentlyYear}}",
+  "email": "Почта: <email>alexf0xdev@gmail.com</email>"
+}

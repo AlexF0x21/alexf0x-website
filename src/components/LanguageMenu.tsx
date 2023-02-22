@@ -8,7 +8,6 @@ const languages = [
   { name: 'Русский', code: 'ru' },
   { name: 'English', code: 'en' },
 ]
-
 const LanguageMenu = () => {
   const router = useRouter()
 

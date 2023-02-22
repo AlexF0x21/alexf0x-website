@@ -1,14 +1,14 @@
 {
-  "home": {
+  "homePage": {
     "title": "Home - AlexF0x",
     "greetings": "Hello, my name is <name>AlexF0x</name>",
     "about": "Front-end developer and a little bit of writing plugins for Minecraft."
   },
-  "error404": {
+  "notFoundPage": {
     "title": "Error 404 - AlexF0x",
-    "not-found": "Page not found",
-    "not-found-detail": "The page you accessed was not found or was deleted.",
-    "back-to-home": "Back to home"
+    "pageNotFound": "Page not found",
+    "notFoundDetail": "The page you accessed was not found or was deleted.",
+    "backToHome": "Back to home"
   },
   "copyright": "Copyright © {{currentlyYear}}",
   "email": "Email: <email>alexf0xdev@gmail.com</email>"

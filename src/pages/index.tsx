@@ -15,17 +15,17 @@ import Head from 'next/head'
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale as string, ['common', 'footer'])),
+      ...(await serverSideTranslations(locale as string, ['common'])),
     },
   }
 }
 
 const socials = [
-  { icon: FaGithub, url: 'https://github.com/alexf0x1' },
-  { icon: FaTelegram, url: 'https://t.me/alexf0xgang' },
-  { icon: FaSteam, url: 'https://steamcommunity.com/id/AlexF0x1' },
-  { icon: FaDiscord, url: 'https://discord.com' },
-  { icon: FaYoutube, url: 'https://youtube.com/' },
+  { icon: FaGithub, url: 'https://github.com/AlexF0x21' },
+  { icon: FaTelegram, url: 'https://t.me/AlexF0x21' },
+  { icon: FaSteam, url: 'https://steamcommunity.com/id/AlexF0x21' },
+  { icon: FaDiscord, url: 'https://discord.io/AlexF0x' },
+  { icon: FaYoutube, url: 'https://www.youtube.com/AlexF0x21' },
 ]
 
 const Home = () => {

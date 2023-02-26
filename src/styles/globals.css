@@ -9,7 +9,7 @@
     }
 
     body {
-        @apply antialiased bg-white text-black dark:bg-zinc-900 dark:text-white
+        @apply antialiased text-lg bg-white text-black dark:bg-zinc-900 dark:text-white
     }
 
     :focus-visible {

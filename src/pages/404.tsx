@@ -5,14 +5,6 @@ import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
 import Head from 'next/head'
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale as string, ['common'])),
-    },
-  }
-}
-
 const Error404 = () => {
   const { t } = useTranslation()
 
@@ -35,6 +27,14 @@ const Error404 = () => {
       </div>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale as string, ['common'])),
+    },
+  }
 }
 
 export default Error404

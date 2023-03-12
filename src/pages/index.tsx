@@ -11,14 +11,9 @@ import { GetStaticProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Trans, useTranslation } from 'next-i18next'
 import Head from 'next/head'
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale as string, ['common'])),
-    },
-  }
-}
+import PostList from '@/components/PostList'
+import { getPosts } from '@/lib/post'
+import { Post } from '@/types/post'
 
 const socials = [
   { icon: FaGithub, url: 'https://github.com/AlexF0x21' },
@@ -28,7 +23,7 @@ const socials = [
   { icon: FaYoutube, url: 'https://www.youtube.com/AlexF0x21' },
 ]
 
-const Home = () => {
+const Home = ({ posts }: { posts: Post[] }) => {
   const { t } = useTranslation()
 
   return (
@@ -57,8 +52,23 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <div>
+        <h2 className={clsx('mb-2')}>Посты</h2>
+        <PostList posts={posts} />
+      </div>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const posts = getPosts()
+
+  return {
+    props: {
+      posts: posts.map(post => ({ ...post.data, slug: post.slug })),
+      ...(await serverSideTranslations(locale as string, ['common'])),
+    },
+  }
 }
 
 export default Home

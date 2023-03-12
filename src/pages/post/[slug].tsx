@@ -51,7 +51,7 @@ const Post = ({
       <div className={clsx('flex justify-between')}>
         <Link
           className={clsx('link')}
-          href={`https://github.com/AlexF0x21/alexf0x-website/tree/main/src/posts/${post.slug}.mdx`}
+          href={`https://github.com/AlexF0x21/alexf0x-website/edit/main/src/posts/${post.slug}.mdx`}
         >
           Edit post on GitHub
         </Link>
